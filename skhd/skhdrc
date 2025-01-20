@@ -1,0 +1,91 @@
+
+##############
+# Focus: alt #
+##############
+
+# focus window
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+
+
+# fast focus desktop
+cmd + alt - x : yabai -m space --focus recent
+cmd + alt - l : yabai -m space --focus next
+cmd + alt - h : yabai -m space --focus prev
+cmd + alt - 1 : yabai -m space --focus 1
+cmd + alt - 2 : yabai -m space --focus 2
+cmd + alt - 3 : yabai -m space --focus 3
+cmd + alt - 4 : yabai -m space --focus 4 
+cmd + alt - 5 : yabai -m space --focus 5
+cmd + alt - 6 : yabai -m space --focus 6 
+cmd + alt - 7 : yabai -m space --focus 7
+
+# focus monitor
+ctrl + alt - h  : yabai -m display --focus prev
+ctrl + alt - 1  : yabai -m display --focus 1
+ctrl + alt - 2  : yabai -m display --focus 2
+
+##############################
+# Window manipulation: shift #
+##############################
+
+# toggle window split type
+shift + cmd - t : yabai -m window --toggle split
+
+# send window to monitor and follow focus
+shift + cmd - c  : yabai -m window --display next; yabai -m display --focus next
+shift + cmd - 1  : yabai -m window --display 1; yabai -m display --focus 1
+shift + cmd - 2  : yabai -m window --display 2; yabai -m display --focus 2
+
+
+# create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
+shift + cmd - n : yabai -m space --create && \
+                  index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
+                  yabai -m window --space "${index}" && \
+                  yabai -m space --focus "${index}"
+
+# Rotate windows inside a desktop
+shift + cmd - r: yabai -m space --rotate 90
+
+# Swap windows
+shift + cmd - h : yabai -m window --swap west
+shift + cmd - j : yabai -m window --swap south
+shift + cmd - k : yabai -m window --swap north
+shift + cmd - l : yabai -m window --swap east
+
+# Send window to desktop and follow focus
+shift + cmd - y  : yabai -m window --space next; yabai -m space --focus next
+shift + cmd - x  : yabai -m window --space prev; yabai -m space --focus prev
+
+# balance size of windows
+shift + alt - 0 : yabai -m space --balance
+
+# resize windows
+shift + alt - h : yabai -m window --resize left:-80:0
+shift + alt - k : yabai -m window --resize top:0:-80
+shift + alt - j : yabai -m window --resize bottom:0:80
+shift + alt - l : yabai -m window --resize right:80:0
+
+#############################
+# Space manipulation: shift #
+#############################
+
+# delete all empty spaces (i.e. spaces without windows)
+shift + cmd - d: yabai -m query --spaces \
+                  | jq '.[] | select(.windows == []) | .index' \
+                  | sort --reverse \
+                  | xargs -I{} sh -c 'yabai -m space "{}" --destroy'
+
+################################################
+# MISC (try to get rid of these at some point) #
+################################################
+
+# toggle window zoom
+alt - d : yabai -m window --toggle zoom-parent
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+# float / unfloat window and center on screen
+alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+

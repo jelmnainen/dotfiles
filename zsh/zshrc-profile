@@ -1,0 +1,142 @@
+##########
+#  PATH  #
+##########
+export PATH="$PATH:/usr/local/bin/"
+
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$PATH:$HOME/.rust/rust-analyzer"
+
+# Haskell
+[ -f "/Users/jelmnain/.ghcup/env" ] && source "/Users/jelmnain/.ghcup/env" # ghcup-env
+
+##########################
+#  Prompt customization  #
+##########################
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Customize colors
+typeset -g POWERLEVEL9K_DIR_BACKGROUND=229
+typeset -g POWERLEVEL9K_DIR_FOREGROUND=0
+typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=0
+
+##############
+#  Includes  #
+##############
+source "/Users/jelmnain/.config/zsh/emblica.zsh"
+source "/Users/jelmnain/.config/zsh/sanoma.zsh"
+
+#############
+#  Tooling  #
+#############
+
+# Global editor setup:
+export EDITOR="nvim"
+
+# history setup
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1000
+HISTSIZE=999
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
+
+# Complete ../ patterns
+zstyle ':completion:*' special-dirs true
+
+#VIM style
+source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+if [ -e /Users/jelmnain/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/jelmnain/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# ZSH-autosuggestions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
+
+# kubectl autosuggestions
+source ~/.config/kubectl/.kube-autocomplete
+
+# ZSH syntax highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Zoxide for better `cd` behaviour
+eval "$(zoxide init zsh)"
+
+# Set up fzf key bindings and fuzzy completion (fzf > 0.48)
+source <(fzf --zsh)
+
+# Load pyenv and init
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# Enable direnv
+eval "$(direnv hook zsh)"
+
+# config = git for dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# set bat theme
+export BAT_THEME='gruvbox-dark'
+
+# load gcloud cli 
+if [ -f '/Users/jelmnain/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/jelmnain/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/jelmnain/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/jelmnain/google-cloud-sdk/completion.zsh.inc'; fi
+
+#################
+# CLI functions #
+#################
+
+extract () {
+    if [ -f $1 ] ; then
+      case $1 in
+        *.tar.bz2)   tar xjf $1     ;;
+        *.tar.gz)    tar xzf $1     ;;
+        *.bz2)       bunzip2 $1     ;;
+        *.rar)       unrar e $1     ;;
+        *.gz)        gunzip $1      ;;
+        *.tar)       tar xf $1      ;;
+        *.tbz2)      tar xjf $1     ;;
+        *.tgz)       tar xzf $1     ;;
+        *.zip)       unzip $1       ;;
+        *.Z)         uncompress $1  ;;
+        *.7z)        7z x $1        ;;
+        *)     echo "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+#############
+#  Aliases  #
+#############
+alias ls="eza --icons=always"
+alias cd="z"
+alias vim="nvim"
+
+#################
+#  keybindings  #
+#################
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+# alt+arrow should jump a word
+bindkey '^[[1;3D' backward-word
+bindkey '^[[1;3C' forward-word
+# cmd+arrow should jump the line
+bindkey '^[[1;9D' beginning-of-line
+bindkey '^[[1;9C' end-of-line
