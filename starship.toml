@@ -1,0 +1,118 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+
+format = """
+$line_break\
+$time\
+$directory\
+$git_branch$git_status$git_state\
+$rust\
+$nodejs\
+$haskell\
+$python\
+$docker_context\
+$kubernetes\
+$line_break\
+$line_break$character\
+"""
+
+# insert a blank line between shell prompts
+add_newline = true
+
+palette = 'gruvbox_dark'
+
+[palettes.gruvbox_dark]
+color_fg0 = '#fbf1c7'
+color_bg1 = '#3c3836'
+color_bg3 = '#665c54'
+color_blue = '#458588'
+color_aqua = '#689d6a'
+color_green = '#98971a'
+color_orange = '#d65d0e'
+color_purple = '#b16286'
+color_red = '#cc241d'
+color_yellow = '#d79921'
+
+[directory]
+style = "color_yellow"
+format = "[$path   ]($style)"
+truncate_to_repo = true
+truncation_length = 5
+truncation_symbol = "../"
+fish_style_pwd_dir_length = 3
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "color_aqua"
+format = '[$symbol $branch]($style)'
+truncation_length = 24
+truncation_symbol = "󰇘"
+
+[git_status]
+style = "color_aqua"
+format = '[[$untracked](fg:color_green)[$modified](fg:color_orange)[$deleted](fg:color_red)$ahead_behind   ]($style)'
+
+[git_state]
+style = "color_red"
+format = "($state($progress_current/$progress_total))[$style]"
+
+[nodejs]
+symbol = ""
+style = "color_blue"
+format = '[$symbol($version)   ]($style)'
+
+[rust]
+symbol = ""
+style = "color_blue"
+format = '[$symbol($version)   ]($style)'
+
+[haskell]
+symbol = ""
+style = "color_blue"
+format = '[$symbol($version)   ]($style)'
+
+[python]
+symbol = ""
+style = "color_blue"
+format = '[$symbol $version   ]($style)'
+
+[docker_context]
+symbol = ""
+style = "color_purple"
+format = '[$symbol($context)   ]($style)'
+
+
+[kubernetes]
+disabled = false
+symbol = "󱃾 "
+style = "color_purple"
+format = "[$symbol$context@$namespace]($style)"
+
+[[kubernetes.contexts]]
+context_pattern = ".*tat-eks-cluster$"
+context_alias = "tat"
+
+[[kubernetes.contexts]]
+context_pattern = "^gke_emblica.*"
+context_alias = "emblica"
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "color_fg0"
+format = '[ $time   ]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[ ](bold fg:color_green)'
+error_symbol = '[ ](bold fg:color_red)'

@@ -1,0 +1,475 @@
+exit
+$env
+ls /Users/jelmnain/.config/
+which nvim
+zsh
+ls
+cd ~/.config/
+$env.HOME
+$nu.config-path
+source $nu.config-path
+$env.PATH
+help http
+help http put
+source $nu.config-path
+office-movie-off
+office-movie
+emblica office-movie
+source $nu.config-path
+emblica office-movie
+http http://10.50.0.15
+http get http://10.50.0.15
+http put --content-type application/json http://10.50.0.15 {}
+source $nu.config-path
+emblica office-movie
+source $nu.config-path
+emblica office-movie
+bat $nu.config-path
+bat nushell/emblica.nu
+source $nu.config-path
+emblica office-movie
+source nushell/emblica.nu
+emblica office-movie
+source nushell/emblica.nu
+emblica office-movie
+emblica office-lights
+emblica office-lights foo bar
+source $nu.config-path
+emblica office-lights foo bar
+emblica office-lights
+emblica office-lights foo bar
+cd .config/
+movie-off
+nvim .
+cd .config/
+office-movie-on
+office-lights-movie
+source $nu.config-path
+office-lights-normal
+source $nu.config-path
+office-lights-normal
+source $nu.config-path
+office-lights-normal
+bat zsh/zshrc-profile
+bat zsh/sanoma.zsh
+cat zsh/sanoma.zsh
+$env
+tty
+cd codebase
+cd ~/codebase/
+ls 
+ls -la
+cd creative-coding/
+ls
+mkdir p5js-base
+cd p5js-base/
+devenv init
+mfa-ana
+$env
+mfa-ana
+pyenv --version
+["foo", "bar"]
+["foo", "bar"] | prepend "baz"
+path
+~/.pyenv | path expand
+"~/.pyenv" | path expand
+pyenv --version
+mfa-ana
+kubectl get pods
+mfa-ana
+$env.KUBECONFIG
+$env
+test
+$env.FOO
+test
+$env.FOO
+test
+$env.FOO
+test
+$env.FOO
+test
+$env.FOO
+test
+$env.FOO
+test
+$env.FOO
+test
+$env.FOO
+test
+$env.FOO
+foo
+$env.FOO
+mfa-ana
+$env.AWS_PROFILE
+kubectl get pods
+kubectl get pods | table
+kubectl get pods -o json | from json
+k -o json
+k
+nvim ~/.config/
+nvim --version
+k
+k -o json
+k get
+k get -o json
+k
+k get -o json
+k
+k get -o json
+k
+k get pods -o json
+k get pods 
+mfa-ana
+k get pods 
+k get pods
+mfa-ana
+k get pods
+k get pods | first
+mfa-ana
+k get pods | type
+k get pods | type | print
+kubectl get pods -o json | type 
+kubectl get pods -o json | type | print
+kubectl get pods -o json | from json
+kubectl get pods -o json | from json | type
+kubectl get pods -o json | from json | describe
+k get pods | describe
+k get pods | get kind
+cd cfo
+zoxide
+zoxide init nushell
+$env.HOME
+$"($env.HOME)/config/"
+ls $"($env.HOME)/config/"
+ls $"($env.HOME)"
+pwd
+$nu.user-autoload-dirs
+cd cfo
+zoxide cfo
+zoxide --help
+bat .zshrc
+z
+z cfo
+cd cfo
+starship --version
+home-manager switch
+nvim ~/.config/
+cd cfo
+bat data/budget-followup/2025-07-31.csv
+cd tatti
+ls
+bat migrations-redshift/sql/R__finnpanel_exports.sql
+nix --version
+ls
+cd tatti
+ls
+bat README.md
+bat Makefile
+bat -P grafana_pod
+bat -P process-compose.yaml
+cd ..
+nvim .
+cd config
+mfa-ana
+cd tatti
+$nu.env-path
+$nu.config-path
+cd tatti
+cd ../../emblica/cfo/cfo-reports/
+cat /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+bat ~/.nix-profile
+ls ~/.nix-profile
+nix --version
+starship --version
+brew --list
+brew help
+brew list
+home-manager --version
+cd ..
+ls 
+cd .config
+ls
+cd home-manager/
+ls
+bat -pp home.nix
+nix-channel --help
+nix-channel
+bat -pp ~/.zshrc
+bat ~/.nix-profile/etc/profile.d/hm-session-vars.sh
+bat -pp ~/.nix-profile/etc/profile.d/hm-session-vars.sh
+home-manager
+starship
+starship init nu
+starship
+cd zsh
+ls
+cd ..
+ls
+ls alacritty/themes/images/
+starship --help
+starship conifg
+starship config
+starship preset gruvbox-rainbow -o ~/.config/starship.toml
+ls
+cd tatti
+ls
+cd ~
+cd codebase/
+cd sanoma/
+cd tatti/
+cd devops/
+cd cfo-reports
+pyenv activate datascience
+sl
+ls
+starship preset bracketed-segments
+starship preset nerd-font-symbols
+ls
+asd
+ls
+asd
+ls
+cd ~
+cd codebase/
+cd sanoma/
+cd tatti/
+cd devops/
+ls
+cd codebase
+ls
+cd tatti
+ls
+git status
+ls
+cd cfo
+ls
+cd tatti
+mfa-ana
+kubectl get pods
+ls
+cd video-transformer/
+ls
+cd ..
+cd cfo
+ls
+$env.config.color_config
+$env.config
+$env.config.color_config
+$env.config.color_config.string
+$env.config.color_config.string = "#000000"
+$env.config.color_config.string
+ls
+$env.config.color_config.string = "white"
+ls
+gruvbox_theme
+ls
+$env.config.color_config
+kubectl get pods
+mfa-ana
+kubens rac
+kubens
+kubeclt get pods
+kubectl get pods
+k get pods
+k get pods | get items
+kubectl get pods | table
+kubectl get pods -o json | from json
+kubectl get pods -o json | from json --depth 2
+from
+from json --help
+ls
+cd tatti
+ls
+cd db-port-forwarding/
+ls
+make
+process-compose
+cd ..
+ls
+bat -pp ./common-packages.nix
+direnv
+direnv allow
+ls
+devenv
+git --version
+nvim .
+cd tatti
+ls
+bat -pp ./common-packages.nix
+jq
+geoipupdate
+bat -pp ./devenv.nix
+bat -pp ./.envrc
+bat -pp ./.direnv/
+ls ./direnv
+ls ./.direnv/
+direnv
+direnv allow .
+cd ..
+cd tatti
+direnv reload
+nix shell
+ls | grep *nix*
+sl
+ls
+ls
+cd config
+$env.config.hooks.env_change.PWD
+bat -pp ~/.config/zoxide.nu
+cd tatti
+cd ..
+cd tatti
+$env.config.hooks.env_change.PWD
+$env.config.hooks.env_change
+direnv export json | from json
+direnv export json
+direnv --help
+brew list 
+which direnv
+direnv --version
+direnv export nushell
+direnv export nu
+direnv export json
+cd tatti
+cd ~/codebase/sanoma/tatti/
+direnv export json
+direnv export json | from json
+bat -pp ~/.config/zoxide.nu
+cd tatti
+$env.config.hooks.env_change.PWD
+ls
+$env.config.hooks.env_change.PWD
+$env.config.hooks.env_change
+$env.config.hooks.env_change.PWD
+'{"foo": 1}' | from json
+$env.config.hooks.env_change.PWD | append ('{"foo": 1}' | from json)
+$env.config.hooks.env_change.PWD | append ('{"foo": 1}' | from json) | select __zoxide_hook
+$env.config.hooks.env_change.PWD | append ('{"foo": 1}' | from json) | select foo
+'{"foo": 1}' | from json | select "foo" 
+($env.config.hooks.env_change.PWD | append ('{"foo": 1}' | from json) )| select foo
+($env.config.hooks.env_change.PWD | append ('{"foo": 1}' | from json) )
+($env.config.hooks.env_change.PWD | append ('{"foo": 1}' | from json) ) | select foo
+$env.config.hooks.env_change.PWD | select code
+$env.config.hooks.env_change.PWD
+cd tatti
+$env.config.hooks.env_change.PWD
+direnv export json
+source ~/.config/nushell/direnv.nu
+$env.config.hooks.env_change.PWD
+$env.PATH
+$env.PATH | split row
+$env.PATH | split row (char env_sep)
+char env_sep
+ls
+cd ..
+cd tatti/
+$env.config.hooks.env_change.PWD
+ls
+$env.config.hooks.env_change.PWD
+cd tatti
+cd ~/codebase/sanoma/tatti/
+$env.config.hooks.env_change.PWD
+which direnv) | is-empty
+which direnv | is-empty
+cd tatti
+cd cfo
+cd tatti
+mfa-ana
+cd db-port-forwarding/
+nvim .
+cd tatti
+jupyter lab
+cd tatti
+git status
+git diff airflow/dags/plutotv-export.py
+git status
+git diff airflow/dags/plutotv-export.py
+git status
+cd airflow/
+bat Makefile
+make deploy-dag TARGET=plutotv-export
+make deploy-dag TARGET=plutotv-export.py
+mfa-ana
+aws s3 ls s3:/nelonen-tat-plutotv-export/
+aws s3 ls s3://nelonen-tat-plutotv-export/
+aws s3 ls s3://nelonen-tat-plutotv-export/prod/
+aws s3 ls s3://nelonen-tat-plutotv-export/prod/date=2025-09-01/
+git status
+git add -p
+git commit --amend
+git push --force
+nvim .
+git checkout master
+git pull
+cd Downloads
+ls
+ls | where modified >= today
+ls | where modified >= "2025-10-05"
+ls | where modified >= (today | date from-human )
+ls | where modified >= ("today" | date from-human )
+"today" | date from-human
+date from-human --list
+ls | where modified >= ("yesterday" | date from-human )
+unzip HEICIT.zip eevan-heicit/
+unzip --help
+extract 
+unzip HEICIT.zip -d eevan_heicit
+cd eevan_heicit/HEICIT/
+ls | select name
+ls | select name | echo $in
+magick
+ls
+magick IMG_0041.HEIC IMG_0041.png
+ls | where name =~ ".png"
+open IMG_0041.png
+open .
+finder .
+start .
+ls | select name | split "."
+ls | select name | split column "."
+ls | (select name | split column ".") 
+ls *.heic
+ls | where name =~".HEIC"
+ls | where name =~ ".HEIC"
+ls | where name =~ ".HEIC" | select name
+ls | where name =~ ".HEIC" | select name | each { |fname|<\n>  let output_file = ($fname | replace ".heic" ".png")<\n>  magick $fname $output_file<\n>}
+ls | where name =~ ".png"
+ls
+cd ..
+cd HEICIT/
+ls | where name =~ ".HEIC" | select name | each { |fname|<\n>  let output_file = ($fname | replace ".heic" ".png")<\n>  magick $fname $output_file<\n>}
+ls | where name =~ ".HEIC" | select name | each { |fname|<\n>  echo "foo"let output_file = ($fname | replace ".heic" ".png")<\n>  magick $fname $output_file<\n>}
+ls | where name =~ ".HEIC" | select name | each { |fname|<\n>  echo $fname<\n>  let output_file = ($fname | replace ".heic" ".png")<\n>  echo $output_file<\n> }<\n>
+ls | where name =~ ".HEIC" | select name | each { |fname|<\n>  echo "foo"<\n>  let output_file = ($fname | replace ".heic" ".png")<\n>  echo $output_file<\n> }<\n>
+ls | where name =~ ".HEIC" | select name | each { |fname|<\n>  echo "foo"<\n> }<\n> <\n>
+ls | where name =~ ".HEIC" | select name | each { |fname|<\n>  echo $fname<\n> }
+ls | where name =~ ".HEIC" | select name | each { |fname|<\n>  echo $fname<\n>  let output_fname = ($fname | str replace ".HEIC" ".png")<\n>  echo $output_fname<\n>}
+ls | where name =~ ".HEIC" | select name | each { |fname|<\n>  echo $fname<\n>  let output_fname = ($fname | get | str replace ".HEIC" ".png")<\n>  echo $output_fname<\n>}
+ls | where name =~ ".HEIC" | select name | each { |fname|<\n>  echo $fname<\n>  let output_fname = ($fname | get name | str replace ".HEIC" ".png")<\n>  echo $output_fname<\n>}
+ls | where name =~ ".HEIC" | select name | each { |fname|<\n>  let output_fname = ($fname | get name | str replace ".HEIC" ".png")<\n>  magick $fname $output_fname<\n>}
+ls | where name =~ ".HEIC" | select name | each { |fname|<\n>  let name = $fname | get namelet output_fname = ($fname | get name | str replace ".HEIC" ".png")<\n>  magick $fname $output_fname<\n>}
+ls | where name =~ ".HEIC" | select name | each { |fname|<\n>  let name = $fname | get name<\n>  let output_fname = ($name | str replace ".HEIC" ".png")<\n>  magick $fname $output_fname<\n>}
+ls | where name =~ ".HEIC" | select name | each { |fname|<\n>  let name = $fname | get name<\n>  let output_fname = ($name | str replace ".HEIC" ".png")<\n>  magick $name $output_fname<\n>}
+ls
+ls | where name =~ ".png"
+ls | where name =~ ".png" | get name
+zip *.png eevan_heicit.zip
+ls | where name =~ ".zip"
+ls
+zip --help
+ls
+archive
+ls
+archive
+/usr/bin/zip
+archive
+cd HEICIT/
+ls
+archive *.png konstakuvat.zip
+archive konstankuvat.zip *.png
+ls | where name =~ ".zip"
+nvim ~/.config/
+cd config
+git status
+git add -p
+git status

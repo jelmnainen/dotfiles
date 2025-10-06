@@ -3,21 +3,25 @@ live_config_reload = true
 import = ["~/.config/alacritty/themes/themes/gruvbox_material_medium_dark.toml"]
 
 [shell]
-program = "/bin/zsh"
+# program = "/bin/zsh"
+program = "/Users/jelmnain/.nix-profile/bin/nu"
 
 [env]
-TERM = "xterm-256color"
+# TERM = "xterm-256color"
+XDG_CONFIG_HOME = "/Users/jelmnain/.config/"
 
 [cursor]
 style = { shape = "Beam", blinking = "Off" }
-vi_mode_style = { shape = "Block", blinking = "Off"}
+vi_mode_style = { shape = "Block", blinking = "Off" }
 
 [window]
 decorations = "buttonless"
 dynamic_padding = false
+padding = { x = 20, y = 20 }
 opacity = 0.8
 blur = true
 startup_mode = "Maximized"
+
 
 [font]
 size = 15.0
